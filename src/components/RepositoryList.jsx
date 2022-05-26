@@ -24,7 +24,9 @@ function RepositoryList() {
             <h1>Lista de reporitório</h1>
 
             <ul>
-                <ReppositoryItem repository={rep} />
+                {rep.map(repository => {
+                    return <ReppositoryItem repository={repository} />
+                })}
             </ul>
         </section>
     )
