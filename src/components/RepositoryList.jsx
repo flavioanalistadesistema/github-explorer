@@ -3,12 +3,6 @@ import { useState, useEffect } from "react";
 
 import '../styles/repositories.scss'
 
-const repository = {
-    name: 'unform2',
-    description: 'Forms is React',
-    link: 'https://github.com/unform/unform'
-}
-
 function RepositoryList() {
     const [rep, setRep] = useState([]);
     console.log(rep, 'rep');
@@ -25,7 +19,7 @@ function RepositoryList() {
 
             <ul>
                 {rep.map(repository => {
-                    return <ReppositoryItem repository={repository} />
+                    return <ReppositoryItem key={repository.name} repository={repository} />
                 })}
             </ul>
         </section>
