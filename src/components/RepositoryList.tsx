@@ -3,8 +3,14 @@ import { useState, useEffect } from "react";
 
 import '../styles/repositories.scss'
 
+interface RepositoryListState {
+    name: string;
+    description: string;
+    html_url: string;
+}
+
 function RepositoryList() {
-    const [rep, setRep] = useState([]);
+    const [rep, setRep] = useState<RepositoryListState[]>([]);
     console.log(rep, 'rep');
 
     useEffect(() => {
